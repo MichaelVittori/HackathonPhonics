@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { PlayCircleFill } from "react-bootstrap-icons";
 import './App.css'
 
 function App() {
@@ -80,7 +79,7 @@ function App() {
       </span>
       <br />
       <button onClick={handleCowButtonClick} style={{ marginTop: '10px' }}>
-        Play Animal Name <PlayCircleFill color="royalblue"/>
+        Play Animal Name
       </button>
       <br />
       <input
