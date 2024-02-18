@@ -15,7 +15,22 @@ function App() {
       { image: '🐎', word: 'horse', sound: 'https://ssl.gstatic.com/dictionary/static/sounds/20200429/horse--_gb_1.mp3'},
       { image: '🐔', word: 'chicken', sound: 'https://ssl.gstatic.com/dictionary/static/sounds/20200429/chicken--_gb_1.mp3'},
       { image: '🐸', word: 'frog', sound: 'https://ssl.gstatic.com/dictionary/static/sounds/20200429/frog--_gb_1.mp3'},
-      { image: '🐕', word: 'dog', sound: 'https://api.dictionaryapi.dev/media/pronunciations/en/dog-uk.mp3'}
+      { image: '🐕', word: 'dog', sound: 'https://api.dictionaryapi.dev/media/pronunciations/en/dog-uk.mp3'},
+      { image: '🐈', word: 'cat', sound: 'https://api.dictionaryapi.dev/media/pronunciations/en/cat-uk.mp3'},
+      { image: '🐦', word: 'bird', sound: 'https://api.dictionaryapi.dev/media/pronunciations/en/bird-us.mp3'},
+      { image: '🦁', word: 'lion', sound: 'https://api.dictionaryapi.dev/media/pronunciations/en/lion-us.mp3'},
+      { image: '🐻', word: 'bear', sound: 'https://api.dictionaryapi.dev/media/pronunciations/en/bear-us.mp3'},
+      { image: '🦭', word: 'seal', sound: 'https://api.dictionaryapi.dev/media/pronunciations/en/seal-us.mp3'},
+      { image: '🐅', word: 'tiger', sound: 'https://api.dictionaryapi.dev/media/pronunciations/en/tiger-1-us.mp3'},
+      { image: '🦈', word: 'shark', sound: 'https://api.dictionaryapi.dev/media/pronunciations/en/shark-us.mp3'},
+      { image: '🐬', word: 'dolphin', sound: 'https://api.dictionaryapi.dev/media/pronunciations/en/dolphin-us.mp3'},
+      { image: '🐟', word: 'fish', sound: 'https://api.dictionaryapi.dev/media/pronunciations/en/fish-uk.mp3'},
+      { image: '🦆', word: 'duck', sound: 'https://api.dictionaryapi.dev/media/pronunciations/en/duck-us.mp3'},
+      { image: '🦉', word: 'owl', sound: 'https://api.dictionaryapi.dev/media/pronunciations/en/owl-us.mp3'},
+      { image: '🦃', word: 'turkey', sound: 'https://api.dictionaryapi.dev/media/pronunciations/en/turkey-us.mp3'},
+      { image: '🐧', word: 'penguin', sound: 'https://api.dictionaryapi.dev/media/pronunciations/en/penguin-us.mp3'},
+      { image: '🐘', word: 'elephant', sound: 'https://api.dictionaryapi.dev/media/pronunciations/en/elephant-us.mp3'},
+      { image: '🐒', word: 'monkey', sound: 'https://api.dictionaryapi.dev/media/pronunciations/en/monkey-us.mp3'}
   ];
 
   /* Just some congrats messages for extra variance */
