@@ -5,6 +5,9 @@ function App() {
   const [showCongratulations, setShowCongratulations] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
+    /* JSON array containing an emoji, name of emoji, and a sound link.
+    *  Users will be shown an emoji and are expected to type the name based on what they see.
+    *  If they need help they can also click a button to play the name of the animal. */
   const images = [
       { image: '🐄', word: 'cow', sound: 'https://ssl.gstatic.com/dictionary/static/sounds/20200429/cow--_gb_1.mp3'},
       { image: '🐎', word: 'horse', sound: 'https://ssl.gstatic.com/dictionary/static/sounds/20200429/horse--_gb_1.mp3'},
@@ -13,6 +16,7 @@ function App() {
       { image: '🐕', word: 'dog', sound: 'https://ssl.gstatic.com/dictionary/static/sounds/20200429/dog--_gb_1.mp3'}
   ];
 
+  /* Just some congrats messages for extra variance */
   const congrats = [
       "Well done!",
       "Nice work!",
@@ -20,29 +24,32 @@ function App() {
       "You're awesome!"
   ]
 
+    /* Function that handles user input, basically just verifies it against expected input based on image */
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
-    const currentKeyword = images[currentImageIndex].word
-    if (event.target.value.toLowerCase() === currentKeyword) {
-      setShowCongratulations(true);
-      const newIndex = (currentImageIndex + 1) % images.length
-        setCurrentImageIndex(newIndex)
+    const currentKeyword = images[currentImageIndex].word //Get the current image being displayed
+    if (event.target.value.toLowerCase() === currentKeyword) { //If the lowercase version of user response == expected:
+      setShowCongratulations(true); //Show them the congrats message
+      const newIndex = (currentImageIndex + 1) % images.length //Then get the next animal image to show
+        setCurrentImageIndex(newIndex) //We have to set the state of currentImageIndex or else it won't update
     } else {
-      setShowCongratulations(false);
+      setShowCongratulations(false); //If the value != expected just don't display congrats message
     }
   };
 
+  /* Function to handle the audio cue created by pressing the sound button */
   const handleCowButtonClick = () => {
-    const audio = new Audio(images[currentImageIndex].sound);
-    audio.play().then(() => {
-      console.log("Animal sound played successfully");
+    const audio = new Audio(images[currentImageIndex].sound); // Get audio from our array above
+    audio.play().then(() => { //.play() is an asynch function, so we need to handle the promise it creates
+      console.log("Animal sound played successfully"); // We do this by printing a simple message to console
     }).catch(error => {
-      console.error("Error playing animal sound:", error);
+      console.error("Error playing animal sound:", error); // Or throwing an error when it fails
     });
   };
 
+  /* This handles the selection of random congratulations messages */
   const getRandomCongrats = () => {
-      const rand = Math.floor(Math.random() * congrats.length)
+      const rand = Math.floor(Math.random() * congrats.length) // Pick a random number within the array
       return congrats[rand]
   }
 
