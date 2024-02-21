@@ -1,5 +1,4 @@
 # HackathonPhonics
 
-#test 
+## 🏆 HackFax 2024 Best Beginner Project Recipient 🏆
 
-This is our hackathon project for HackFax 2024!
